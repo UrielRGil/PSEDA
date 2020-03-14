@@ -4,12 +4,17 @@
 
 #include "Materia.h"
 
+int Menu();
+
+void agregarMateria();
+
 void menuMateria() {
     bool continuar = true;
 
     do {
-        switch() {
+        switch(Menu()) {
             case 1:
+                agregarMateria();
                 break;
             case 2:
                 break;
@@ -27,4 +32,18 @@ void menuMateria() {
                 getchar();
         }
     }while(continuar);
+}
+
+void agregarMateria() {
+
+}
+
+int Menu() {
+    int opc;
+
+    cout << "**********Menu Materia**********" << endl;
+    cout << "1. Agregar\n2. Mostrar\n3. Buscar\n4. Modificar\n5. Eliminar\n6. Regresar\nOpcion: ";
+    cin >> opc;
+    getchar();
+    return opc;
 }
