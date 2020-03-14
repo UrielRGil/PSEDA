@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Pagos.h"
-
+#include "util.h"
 
 
 void menuPagos();
@@ -33,17 +33,3 @@ int main() {
 }
 // Fin de la funcion principal
 
-
-/* Muestra el menu principal del programa
- * No recibe parametros
- * Regresa un entero que indica cual opcion realizar
- * */
-int menuPrincipal() {
-    int opc;
-
-    cout << "**********Menu Principal**********" << endl;
-    cout << "1. Pagos\n2. Materia\n3. Salir\nOpcion: ";
-    cin >> opc;
-    getchar();
-    return opc;
-}

@@ -116,3 +116,29 @@ void Materia::nuevoRegistro() {
 int Materia::getNumRegs() {
     return this->numMat;
 }
+
+bool Materia::buscarIndice(char *key) {
+    ifstream fileIndice(INDICES_MATERIAS,ios::in);
+    Indice indice;
+
+    if(fileIndice.is_open()) {
+        for (int i = 0; i < getNumRegs() ; ++i) {
+            fileIndice >> indice.nrc >> indice.pos;
+            if(strcmp(key,indice.nrc) == 0) {
+                buscarReg(indice);
+            }
+            else {
+                return false;
+            }
+        }
+    }
+}
+
+void Materia::buscarReg(Indice indice) {
+    ifstream data(ARCHIVO_MATERIAS,ios::in);
+
+    if(data.is_open()) {
+        
+    }
+
+}

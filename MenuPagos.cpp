@@ -3,10 +3,9 @@
 //
 
 #include "Pagos.h"
+#include "util.h"
 
 void menuPagos();
-
-int menu();
 
 void agregarPagos();
 
@@ -22,7 +21,7 @@ void eliminarPago();
 void menuPagos(){
     bool continuar = true;
     do{
-        switch (menu()){
+        switch (menu("Menu Pagos")){
             case 1:
                 agregarPagos();
                 break;
@@ -134,14 +133,4 @@ void agregarPagos() {
     }
     delete  p;
     getchar();
-}
-
-int menu() {
-    int opc;
-
-    cout << "**********Menu Pagos**********" << endl;
-    cout << "1. Agregar\n2. Mostrar\n3. Buscar\n4. Modificar\n5. Eliminar\n6. Regresar\nOpcion: ";
-    cin >> opc;
-    getchar();
-    return opc;
 }

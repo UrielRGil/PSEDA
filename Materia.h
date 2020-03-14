@@ -21,6 +21,16 @@
 
 using namespace std;
 
+class Indice{
+public:
+    Indice(){
+        pos = 0;
+    }
+    long int pos;
+    char nrc[TAM_NRC+1] = {'\0'};
+};
+
+
 class Materia {
 private:
     char nombre[TAM_NOMBRE+1] = {'\0'};
@@ -41,20 +51,12 @@ public:
     const char *getClave();
     void agregar(Materia &nuevo);
     bool mostrar();
-
+    bool buscarIndice(char *key);
 private:
     void imprimir(Materia &mat);
     void nuevoRegistro();
     int getNumRegs();
-};
-
-class Indice{
-public:
-    Indice(){
-        pos = 0;
-    }
-    long int pos;
-    char nrc[TAM_NRC+1] = {'\0'};
+    void buscarReg(Indice indice);
 };
 
 #endif //PSEDA_MATERIA_H
