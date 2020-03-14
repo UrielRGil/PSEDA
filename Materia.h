@@ -35,7 +35,17 @@ public:
     void setNrc(char *nrc);
     void setSeccion(char *seccion);
     void setClave(char *clave);
+    const char *getNombre();
+    const char *getNrc();
+    const char *getSeccion();
+    const char *getClave();
     void agregar(Materia &nuevo);
+    bool mostrar();
+
+private:
+    void imprimir(Materia &mat);
+    void nuevoRegistro();
+    int getNumRegs();
 };
 
 class Indice{

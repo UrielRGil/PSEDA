@@ -40,9 +40,26 @@ void Materia::setSeccion(char *seccion) {
     strcpy(this->seccion,seccion);
 }
 
+const char * Materia::getNombre() {
+    return this->nombre;
+}
+
+const char * Materia::getNrc() {
+    return this->nrc;
+}
+
+const char * Materia::getSeccion() {
+    return this->seccion;
+}
+
+const char * Materia::getClave() {
+    return this->clave;
+}
+
 void Materia::agregar(Materia &nuevo) {
     ofstream fileMat(ARCHIVO_MATERIAS,ios::app);
     ofstream fileIndices(INDICES_MATERIAS,ios::app);
+    ofstream countFile(ARCHIVO_NUM_MAT,ios::out);
     Indice indice;
 
     if(fileMat.is_open() && fileIndices.is_open()) {
@@ -58,10 +75,44 @@ void Materia::agregar(Materia &nuevo) {
 
             fileIndices << indice.nrc << " " << indice.pos << " ";
             fileIndices.close();
+            nuevoRegistro();
+            if (countFile.is_open()) {
+                countFile << this->numMat;
+            }
+            countFile.close();
         }
     }
 }
 
 bool contiene(char *key) {
     return false;
+}
+
+bool Materia::mostrar() {
+    ifstream data(ARCHIVO_MATERIAS,ios::in);
+    Materia mat;
+    if(data.is_open()) {
+        for (int i = 0; i < getNumRegs() ; ++i) {
+            data.read((char*)&mat,sizeof(Materia));
+            imprimir(mat);
+        }
+        return true;
+    }else {
+        return false;
+    }
+}
+
+void Materia::imprimir(Materia &mat) {
+    cout << "Nombre: " << mat.getNombre() << endl;
+    cout << "NRC: " << mat.getNrc() << endl;
+    cout << "Seccion: " << mat.getSeccion() << endl;
+    cout << "Clave: " << mat.getClave() << endl << endl;
+}
+
+void Materia::nuevoRegistro() {
+    this->numMat++;
+}
+
+int Materia::getNumRegs() {
+    return this->numMat;
 }

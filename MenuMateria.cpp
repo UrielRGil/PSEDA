@@ -4,6 +4,8 @@ int Menu();
 
 void agregarMateria();
 
+void mostrarMaterias();
+
 void menuMateria() {
     bool continuar = true;
 
@@ -14,7 +16,7 @@ void menuMateria() {
                 agregarMateria();
                 break;
             case 2:
-                
+                mostrarMaterias();
                 break;
             case 3:
                 break;
@@ -30,6 +32,16 @@ void menuMateria() {
                 getchar();
         }
     }while(continuar);
+}
+
+void mostrarMaterias() {
+    Materia *m;
+    cout << "**********Listado de materias**********" << endl;
+    m = new Materia();
+    if(!m->mostrar()) {
+        cout << "No hay registros que mostrar" << endl;
+    }
+    getchar();
 }
 
 void agregarMateria() {
