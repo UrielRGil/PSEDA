@@ -1,0 +1,3 @@
+C:/Users/R/Documents/ClionProjects/PSEDA/cmake-build-debug/CMakeFiles/PSEDA.dir
+C:/Users/R/Documents/ClionProjects/PSEDA/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/R/Documents/ClionProjects/PSEDA/cmake-build-debug/CMakeFiles/rebuild_cache.dir
