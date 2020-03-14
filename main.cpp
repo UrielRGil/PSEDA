@@ -42,7 +42,7 @@ int menuPrincipal() {
     int opc;
 
     cout << "**********Menu Principal**********" << endl;
-    cout << "1. Pagos\n2.Materia\n3. Salir\nOpcion: " << endl;
+    cout << "1. Pagos\n2. Materia\n3. Salir\nOpcion: ";
     cin >> opc;
     getchar();
     return opc;
