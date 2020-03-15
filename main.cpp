@@ -1,11 +1,6 @@
 #include <iostream>
-#include "Pagos.h"
+
 #include "util.h"
-
-
-void menuPagos();
-void menuMateria();
-int menuPrincipal();
 
 using namespace std;
 
@@ -16,10 +11,10 @@ int main() {
     do{
         switch (menuPrincipal()){
             case 1:
-                menuPagos();
+                menu("Pagos");
                 break;
             case 2:
-                menuMateria();
+                menu("Materias");
                 break;
             case 3:
                 continuar = false;

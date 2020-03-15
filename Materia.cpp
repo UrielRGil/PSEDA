@@ -135,10 +135,17 @@ bool Materia::buscarIndice(char *key) {
 }
 
 void Materia::buscarReg(Indice indice) {
+    Materia mat;
     ifstream data(ARCHIVO_MATERIAS,ios::in);
-
+    long int pos;
     if(data.is_open()) {
-        
+        pos = indice.pos * sizeof(Materia);
+        data.seekg(pos,ios::beg);
+        data.read((char*)&mat,sizeof(Materia));
+        imprimir(mat);
+    }else{
+        data.close();
+        return;
     }
-
+    data.close();
 }

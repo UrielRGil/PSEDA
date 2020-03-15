@@ -6,13 +6,15 @@ CMakeFiles/PSEDA.dir/Materia.cpp.obj: ../Materia.h
 
 CMakeFiles/PSEDA.dir/MenuMateria.cpp.obj: ../Materia.h
 CMakeFiles/PSEDA.dir/MenuMateria.cpp.obj: ../MenuMateria.cpp
+CMakeFiles/PSEDA.dir/MenuMateria.cpp.obj: ../util.h
 
 CMakeFiles/PSEDA.dir/MenuPagos.cpp.obj: ../MenuPagos.cpp
 CMakeFiles/PSEDA.dir/MenuPagos.cpp.obj: ../Pagos.h
+CMakeFiles/PSEDA.dir/MenuPagos.cpp.obj: ../util.h
 
 CMakeFiles/PSEDA.dir/Pagos.cpp.obj: ../Pagos.cpp
 CMakeFiles/PSEDA.dir/Pagos.cpp.obj: ../Pagos.h
 
-CMakeFiles/PSEDA.dir/main.cpp.obj: ../Pagos.h
 CMakeFiles/PSEDA.dir/main.cpp.obj: ../main.cpp
+CMakeFiles/PSEDA.dir/main.cpp.obj: ../util.h
 

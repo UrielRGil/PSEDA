@@ -10,7 +10,6 @@ void buscarMateria();
 void menuMateria() {
     bool continuar = true;
 
-
     do {
         switch(menu("Menu Materia")) {
             case 1:
