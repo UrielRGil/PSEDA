@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/R/Documents/ClionProjects/PSEDA/Materia.cpp
+Materia.h
+C:/Users/R/Documents/ClionProjects/PSEDA/Materia.h
+
 C:/Users/R/Documents/ClionProjects/PSEDA/Materia.h
 iostream
 -
@@ -14,33 +18,5 @@ string
 cstring
 -
 fstream
--
-
-C:/Users/R/Documents/ClionProjects/PSEDA/MenuMateria.cpp
-Materia.h
-C:/Users/R/Documents/ClionProjects/PSEDA/Materia.h
-util.h
-C:/Users/R/Documents/ClionProjects/PSEDA/util.h
-
-C:/Users/R/Documents/ClionProjects/PSEDA/MenuPagos.cpp
-Pagos.h
-C:/Users/R/Documents/ClionProjects/PSEDA/Pagos.h
-util.h
-C:/Users/R/Documents/ClionProjects/PSEDA/util.h
-
-C:/Users/R/Documents/ClionProjects/PSEDA/Pagos.h
-iostream
--
-cstring
-C:/Users/R/Documents/ClionProjects/PSEDA/cstring
-
-C:/Users/R/Documents/ClionProjects/PSEDA/main.cpp
-iostream
--
-util.h
-C:/Users/R/Documents/ClionProjects/PSEDA/util.h
-
-C:/Users/R/Documents/ClionProjects/PSEDA/util.h
-iostream
 -
 

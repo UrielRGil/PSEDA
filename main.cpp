@@ -1,20 +1,28 @@
 #include <iostream>
 
-#include "util.h"
-
 using namespace std;
 
+void menuMateria();
+void menuPagos();
+int principalMenu() {
+    int opc;
+    cout << "**********Menu Principal**********" << endl;
+    cout << "1. Pagos\n2. Materia\n3. Salir\nOpcion: ";
+    cin >> opc;
+    getchar();
+    return opc;
+}
 // Inicio de la función principal
 int main() {
     bool continuar = true;
 
     do{
-        switch (menuPrincipal()){
+        switch(principalMenu()){
             case 1:
-                menu("Pagos");
+                menuPagos();
                 break;
             case 2:
-                menu("Materias");
+                menuMateria();
                 break;
             case 3:
                 continuar = false;

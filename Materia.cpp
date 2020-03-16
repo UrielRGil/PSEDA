@@ -126,12 +126,11 @@ bool Materia::buscarIndice(char *key) {
             fileIndice >> indice.nrc >> indice.pos;
             if(strcmp(key,indice.nrc) == 0) {
                 buscarReg(indice);
-            }
-            else {
-                return false;
+                return true;
             }
         }
     }
+    return false;
 }
 
 void Materia::buscarReg(Indice indice) {
@@ -139,8 +138,7 @@ void Materia::buscarReg(Indice indice) {
     ifstream data(ARCHIVO_MATERIAS,ios::in);
     long int pos;
     if(data.is_open()) {
-        pos = indice.pos * sizeof(Materia);
-        data.seekg(pos,ios::beg);
+        data.seekg(indice.pos,ios::beg);
         data.read((char*)&mat,sizeof(Materia));
         imprimir(mat);
     }else{

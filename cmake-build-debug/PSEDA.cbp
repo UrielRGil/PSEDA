@@ -101,9 +101,6 @@
 		<Unit filename="C:/Users/R/Documents/ClionProjects/PSEDA/main.cpp">
 			<Option target="PSEDA"/>
 		</Unit>
-		<Unit filename="C:/Users/R/Documents/ClionProjects/PSEDA/util.h">
-			<Option target="PSEDA"/>
-		</Unit>
 		<Unit filename="C:/Users/R/Documents/ClionProjects/PSEDA/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

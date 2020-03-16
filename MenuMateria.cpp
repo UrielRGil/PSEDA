@@ -1,5 +1,4 @@
 #include "Materia.h"
-#include "util.h"
 
 void agregarMateria();
 
@@ -7,11 +6,22 @@ void mostrarMaterias();
 
 void buscarMateria();
 
+int menu() {
+    int opc;
+
+    cout << "**********Materia**********" << endl;
+    cout << "1. Agregar\n2. Mostrar\n3. Buscar\n4. Modificar\n5. Eliminar\n6. Regresar\nOpcion: ";
+    cin >> opc;
+    getchar();
+    return opc;
+}
+
+
 void menuMateria() {
     bool continuar = true;
 
     do {
-        switch(menu("Menu Materia")) {
+        switch(menu()) {
             case 1:
                 agregarMateria();
                 break;
@@ -22,6 +32,7 @@ void menuMateria() {
                 buscarMateria();
                 break;
             case 4:
+
                 break;
             case 5:
                 break;
@@ -35,10 +46,12 @@ void menuMateria() {
     }while(continuar);
 }
 
+
 void buscarMateria() {
     char nrc[TAM_NRC+1];
     Materia mat;
     cout << "**********Buscar**********" << endl;
+    cout << "Ingresa el nrc a buscar: ";
     cin.getline(nrc,TAM_NRC+1);
     if(!mat.buscarIndice(nrc)){
         cout << "Registro no encontrado..." << endl;

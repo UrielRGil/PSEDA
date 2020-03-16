@@ -1,9 +1,4 @@
-//
-// Created by R on 14/03/2020.
-//
-
 #include "Pagos.h"
-#include "util.h"
 
 void menuPagos();
 
@@ -16,6 +11,17 @@ void buscarPago();
 void ModificarPago();
 
 void eliminarPago();
+
+int menu(string msj) {
+    int opc;
+
+    cout << "**********" << msj << "**********" << endl;
+    cout << "1. Agregar\n2. Mostrar\n3. Buscar\n4. Modificar\n5. Eliminar\n6. Regresar\nOpcion: ";
+    cin >> opc;
+    getchar();
+    return opc;
+}
+
 
 // Controla el sub menu del apartado ""Pagos""
 void menuPagos(){

@@ -3,4 +3,4 @@ project(PSEDA)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(PSEDA main.cpp MenuPagos.cpp Pagos.cpp Pagos.h MenuMateria.cpp Materia.cpp Materia.h util.h)
+add_executable(PSEDA main.cpp MenuPagos.cpp Pagos.cpp Pagos.h MenuMateria.cpp Materia.cpp Materia.h)
