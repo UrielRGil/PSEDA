@@ -6,6 +6,8 @@ void mostrarMaterias();
 
 void buscarMateria();
 
+void modificarMateria();
+
 int menu() {
     int opc;
 
@@ -32,7 +34,7 @@ void menuMateria() {
                 buscarMateria();
                 break;
             case 4:
-
+                modificarMateria();
                 break;
             case 5:
                 break;
@@ -44,6 +46,37 @@ void menuMateria() {
                 getchar();
         }
     }while(continuar);
+}
+
+void modificarMateria() {
+    char nrc[TAM_NRC+1], nrc2[TAM_NRC+1];
+    char nombre[TAM_NOMBRE+1] = {'\0'};
+    char seccion[TAM_SECCION+1] = {'\0'};
+    char clave[TAM_CLAVE+1] = {'\0'};
+
+    Materia mat;
+    cout << "**********Modificarr***********" << endl;
+    cout << "Ingresa el nrc de la materia que desea modificar: ";
+    cin.getline(nrc,TAM_NRC+1);
+
+    cout << "Ingresa los nuevos datos de la materia" << endl;
+    cout << "Ingresa el nuevo nrc: ";
+    cin.getline(nrc2,TAM_NRC+1);
+    cout << "Ingresa el nuevo nombre de la materia: ";
+    cin.getline(nombre,TAM_NOMBRE+1);
+    cout << "Ingresa la nueva seccion de la materia: ";
+    cin.getline(seccion,TAM_SECCION+1);
+    cout << "Ingresa la nueva clave: ";
+    cin.getline(clave,TAM_CLAVE+1);
+
+    mat.setNrc(nrc2);
+    mat.setNombre(nombre);
+    mat.setSeccion(seccion);
+    mat.setClave(clave);
+
+    mat.modificar(mat,nrc);
+
+
 }
 
 

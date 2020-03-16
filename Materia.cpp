@@ -44,7 +44,7 @@ const char * Materia::getNombre() {
     return this->nombre;
 }
 
-const char * Materia::getNrc() {
+char * Materia::getNrc() {
     return this->nrc;
 }
 
@@ -146,4 +146,44 @@ void Materia::buscarReg(Indice indice) {
         return;
     }
     data.close();
+}
+
+bool Materia::modificar(Materia &m, char *key) {
+    ofstream archivoDatos(ARCHIVO_MATERIAS,ios::out | ios::in);
+    ofstream archivoIndice(INDICES_MATERIAS,ios::out | ios::in);
+    int posByteIndice;
+    long int posByteData;
+    Indice indice;
+
+    if(archivoDatos.is_open() && archivoIndice.is_open()) {
+        posByteData = buscarNrc(key);
+        posByteIndice = (posByteData/sizeof(Materia)) * sizeof(Indice);
+
+        archivoDatos.seekp(posByteData,ios::beg);
+        archivoDatos.write((char*)&m, sizeof(Materia));
+        archivoIndice.seekp(posByteIndice,ios::beg);
+        indice.pos = posByteData;
+        strcpy(indice.nrc,m.getNrc());
+        archivoIndice << indice.nrc  << " " << indice.pos;
+
+        archivoDatos.close();
+        archivoIndice.close();
+        return true;
+    }
+}
+
+long int Materia::buscarNrc(char *indBuscado) {
+    ifstream indice(INDICES_MATERIAS,ios::in);
+    Indice ind;
+    if (indice.is_open()) {
+        for (int i = 0; i < getNumRegs() ; ++i) {
+            indice >> ind.nrc >> ind.pos;
+            if(strcmp(ind.nrc,indBuscado) == 0) {
+                return ind.pos;
+                indice.close();
+            }
+        }
+    }
+    indice.close();
+    return -1;
 }

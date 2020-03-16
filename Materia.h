@@ -18,6 +18,8 @@
 #define ARCHIVO_NUM_MAT "Num_materias.txt"
 #define ARCHIVO_MATERIAS "Materias.txt"
 #define INDICES_MATERIAS "IndicesMaterias.txt"
+#define DATA_TEMP "DataTemp.txt"
+#define INDICE_TEMP "TempIndice.txt"
 
 using namespace std;
 
@@ -46,17 +48,19 @@ public:
     void setSeccion(char *seccion);
     void setClave(char *clave);
     const char *getNombre();
-    const char *getNrc();
+    char *getNrc();
     const char *getSeccion();
     const char *getClave();
     void agregar(Materia &nuevo);
     bool mostrar();
     bool buscarIndice(char *key);
+    bool modificar(Materia &m, char *nrc);
 private:
     void imprimir(Materia &mat);
     void nuevoRegistro();
     int getNumRegs();
     void buscarReg(Indice indice);
+    long int buscarNrc(char *indBuscado);
 };
 
 #endif //PSEDA_MATERIA_H
