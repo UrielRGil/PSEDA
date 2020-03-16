@@ -204,31 +204,31 @@ void Materia::eliminar(char *nrcEliminar) {
             indice >> ind.nrc >> ind.pos;
             data.read((char*)&materiaTemp,sizeof(Materia));
 
-            if(strcmp(materiaTemp.getNrc(),nrcEliminar) == 0) {
-                if (ind.pos > posByte){
+            if(strcmp(materiaTemp.getNrc(),nrcEliminar) != 0) {
+                if (ind.pos > posByte) {
                     ind.pos -= sizeof(Materia);
-                    dataTemp.write((char*)&materiaTemp, sizeof(Materia));
-                    indiceTemp << ind.nrc << " " << ind.pos;
                 }
+                dataTemp.write((char*)&materiaTemp, sizeof(Materia));
+                indiceTemp << ind.nrc << " " << ind.pos << " ";
             }
-            dataTemp.close();
-            indiceTemp.close();
-            data.close();
-            indice.close();
-
-            if(numRegs.is_open()) {
-                this->numMat--;
-                numRegs << this->numMat;
-            }
-
-            numRegs.close();
-
-            remove(INDICES_MATERIAS);
-            rename(INDICE_TEMP,INDICES_MATERIAS);
-
-            remove(DATA_TEMP);
-            rename(DATA_TEMP,ARCHIVO_MATERIAS);
         }
     }
+    dataTemp.close();
+    indiceTemp.close();
+    data.close();
+    indice.close();
+
+    if(numRegs.is_open()) {
+        this->numMat--;
+        numRegs << this->numMat;
+    }
+
+    numRegs.close();
+
+    remove(INDICES_MATERIAS);
+    rename(INDICE_TEMP,INDICES_MATERIAS);
+
+    remove(ARCHIVO_MATERIAS);
+    rename(DATA_TEMP,ARCHIVO_MATERIAS);
 }
 
