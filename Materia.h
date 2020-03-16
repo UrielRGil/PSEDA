@@ -55,12 +55,14 @@ public:
     bool mostrar();
     bool buscarIndice(char *key);
     bool modificar(Materia &m, char *nrc);
+    void eliminar(char *nrcEliminar);
 private:
     void imprimir(Materia &mat);
     void nuevoRegistro();
     int getNumRegs();
     void buscarReg(Indice indice);
     long int buscarNrc(char *indBuscado);
+
 };
 
 #endif //PSEDA_MATERIA_H

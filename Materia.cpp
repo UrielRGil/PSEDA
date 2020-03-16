@@ -166,10 +166,10 @@ bool Materia::modificar(Materia &m, char *key) {
         strcpy(indice.nrc,m.getNrc());
         archivoIndice << indice.nrc  << " " << indice.pos;
 
-        archivoDatos.close();
-        archivoIndice.close();
-        return true;
     }
+    archivoDatos.close();
+    archivoIndice.close();
+    return true;
 }
 
 long int Materia::buscarNrc(char *indBuscado) {
@@ -187,3 +187,48 @@ long int Materia::buscarNrc(char *indBuscado) {
     indice.close();
     return -1;
 }
+
+void Materia::eliminar(char *nrcEliminar) {
+    ifstream data(ARCHIVO_MATERIAS,ios::in);
+    ifstream indice(INDICES_MATERIAS,ios::in);
+    ofstream dataTemp(DATA_TEMP,ios::app);
+    ofstream indiceTemp(INDICE_TEMP,ios::app);
+    ofstream numRegs(ARCHIVO_NUM_MAT,ios::out);
+    Materia materiaTemp;
+    long int posByte;
+    Indice ind;
+
+    if(data.is_open() && indice.is_open()) {
+        posByte = buscarNrc(nrcEliminar);
+        for (int i = 0; i < getNumRegs() ; ++i) {
+            indice >> ind.nrc >> ind.pos;
+            data.read((char*)&materiaTemp,sizeof(Materia));
+
+            if(strcmp(materiaTemp.getNrc(),nrcEliminar) == 0) {
+                if (ind.pos > posByte){
+                    ind.pos -= sizeof(Materia);
+                    dataTemp.write((char*)&materiaTemp, sizeof(Materia));
+                    indiceTemp << ind.nrc << " " << ind.pos;
+                }
+            }
+            dataTemp.close();
+            indiceTemp.close();
+            data.close();
+            indice.close();
+
+            if(numRegs.is_open()) {
+                this->numMat--;
+                numRegs << this->numMat;
+            }
+
+            numRegs.close();
+
+            remove(INDICES_MATERIAS);
+            rename(INDICE_TEMP,INDICES_MATERIAS);
+
+            remove(DATA_TEMP);
+            rename(DATA_TEMP,ARCHIVO_MATERIAS);
+        }
+    }
+}
+

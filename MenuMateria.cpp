@@ -8,6 +8,8 @@ void buscarMateria();
 
 void modificarMateria();
 
+void eliminarMateria();
+
 int menu() {
     int opc;
 
@@ -37,6 +39,7 @@ void menuMateria() {
                 modificarMateria();
                 break;
             case 5:
+                eliminarMateria();
                 break;
             case 6:
                 continuar = false;
@@ -46,6 +49,17 @@ void menuMateria() {
                 getchar();
         }
     }while(continuar);
+}
+
+void eliminarMateria() {
+    Materia m;
+    char nrcElimnar[TAM_NRC+1];
+
+    cout << "**********Eliminar Materia**********" << endl;
+    cout << "Ingrese el nrc que desea eliminar: ";
+    cin.getline(nrcElimnar,TAM_NRC+1);
+
+    m.eliminar(nrcElimnar);
 }
 
 void modificarMateria() {
