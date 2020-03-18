@@ -122,6 +122,33 @@ PSEDA/fast:
 	$(MAKE) -f CMakeFiles\PSEDA.dir\build.make CMakeFiles/PSEDA.dir/build
 .PHONY : PSEDA/fast
 
+Grupos.obj: Grupos.cpp.obj
+
+.PHONY : Grupos.obj
+
+# target to build an object file
+Grupos.cpp.obj:
+	$(MAKE) -f CMakeFiles\PSEDA.dir\build.make CMakeFiles/PSEDA.dir/Grupos.cpp.obj
+.PHONY : Grupos.cpp.obj
+
+Grupos.i: Grupos.cpp.i
+
+.PHONY : Grupos.i
+
+# target to preprocess a source file
+Grupos.cpp.i:
+	$(MAKE) -f CMakeFiles\PSEDA.dir\build.make CMakeFiles/PSEDA.dir/Grupos.cpp.i
+.PHONY : Grupos.cpp.i
+
+Grupos.s: Grupos.cpp.s
+
+.PHONY : Grupos.s
+
+# target to generate assembly for a file
+Grupos.cpp.s:
+	$(MAKE) -f CMakeFiles\PSEDA.dir\build.make CMakeFiles/PSEDA.dir/Grupos.cpp.s
+.PHONY : Grupos.cpp.s
+
 Materia.obj: Materia.cpp.obj
 
 .PHONY : Materia.obj
@@ -257,6 +284,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\PSEDA.dir\build.make CMakeFiles/PSEDA.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+menuGrupos.obj: menuGrupos.cpp.obj
+
+.PHONY : menuGrupos.obj
+
+# target to build an object file
+menuGrupos.cpp.obj:
+	$(MAKE) -f CMakeFiles\PSEDA.dir\build.make CMakeFiles/PSEDA.dir/menuGrupos.cpp.obj
+.PHONY : menuGrupos.cpp.obj
+
+menuGrupos.i: menuGrupos.cpp.i
+
+.PHONY : menuGrupos.i
+
+# target to preprocess a source file
+menuGrupos.cpp.i:
+	$(MAKE) -f CMakeFiles\PSEDA.dir\build.make CMakeFiles/PSEDA.dir/menuGrupos.cpp.i
+.PHONY : menuGrupos.cpp.i
+
+menuGrupos.s: menuGrupos.cpp.s
+
+.PHONY : menuGrupos.s
+
+# target to generate assembly for a file
+menuGrupos.cpp.s:
+	$(MAKE) -f CMakeFiles\PSEDA.dir\build.make CMakeFiles/PSEDA.dir/menuGrupos.cpp.s
+.PHONY : menuGrupos.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -266,6 +320,9 @@ help:
 	@echo ... PSEDA
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Grupos.obj
+	@echo ... Grupos.i
+	@echo ... Grupos.s
 	@echo ... Materia.obj
 	@echo ... Materia.i
 	@echo ... Materia.s
@@ -281,6 +338,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... menuGrupos.obj
+	@echo ... menuGrupos.i
+	@echo ... menuGrupos.s
 .PHONY : help
 
 

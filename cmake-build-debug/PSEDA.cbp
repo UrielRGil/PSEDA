@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/R/Documents/ClionProjects/PSEDA/Grupos.cpp">
+			<Option target="PSEDA"/>
+		</Unit>
+		<Unit filename="C:/Users/R/Documents/ClionProjects/PSEDA/Grupos.h">
+			<Option target="PSEDA"/>
+		</Unit>
 		<Unit filename="C:/Users/R/Documents/ClionProjects/PSEDA/Materia.cpp">
 			<Option target="PSEDA"/>
 		</Unit>
@@ -99,6 +105,9 @@
 			<Option target="PSEDA"/>
 		</Unit>
 		<Unit filename="C:/Users/R/Documents/ClionProjects/PSEDA/main.cpp">
+			<Option target="PSEDA"/>
+		</Unit>
+		<Unit filename="C:/Users/R/Documents/ClionProjects/PSEDA/menuGrupos.cpp">
 			<Option target="PSEDA"/>
 		</Unit>
 		<Unit filename="C:/Users/R/Documents/ClionProjects/PSEDA/CMakeLists.txt">

@@ -4,10 +4,12 @@ using namespace std;
 
 void menuMateria();
 void menuPagos();
+void menuGrupos();
+
 int principalMenu() {
     int opc;
     cout << "**********Menu Principal**********" << endl;
-    cout << "1. Pagos\n2. Materia\n3. Salir\nOpcion: ";
+    cout << "1. Pagos\n2. Materia\n3. Grupos\n4. Salir\nOpcion: ";
     cin >> opc;
     getchar();
     return opc;
@@ -25,6 +27,9 @@ int main() {
                 menuMateria();
                 break;
             case 3:
+                menuGrupos();
+                break;
+            case 4:
                 continuar = false;
                 break;
             default:

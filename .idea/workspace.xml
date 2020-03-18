@@ -13,12 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2ead3aa9-87e4-460a-b71a-05564b935d41" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materia.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Materia.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSEDA.dir/Materia.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSEDA.dir/Materia.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSEDA.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSEDA.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Num_materias - copia.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Num_materias.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Num_materias.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/PSEDA.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/PSEDA.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +57,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584209286644</updated>
-      <workItem from="1584209288034" duration="19674000" />
+      <workItem from="1584209288034" duration="20405000" />
+      <workItem from="1584511724339" duration="258000" />
     </task>
     <servers />
   </component>
@@ -74,46 +70,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584374393930" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1584384401796">
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1584392114156">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584384401796" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1584384401796">
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584392114156" />
+    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1584392114156">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584384401796" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1584384401796">
+    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584392114156" />
+    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1584392114156">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584384401796" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1584384401796">
+    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584392114156" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1584392114156">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584384401796" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1584384359905">
+    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584392114156" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1584392114156">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584384359905" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1584384359905">
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584392114156" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1584392114156">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1584384359905" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1584384359905">
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1584392114156" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1584392114156">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1584384359905" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1584384359905">
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1584392114156" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1584392114156">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1584384359905" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1584392114156" />
     <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1584213429026">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584213429026" />
-    <state x="408" y="0" width="550" height="688" key="refactoring.ChangeSignatureDialog" timestamp="1584382185800">
+    <state x="408" y="0" width="550" height="688" key="refactoring.ChangeSignatureDialog" timestamp="1584512181359">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="408" y="0" width="550" height="688" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1584382185800" />
+    <state x="408" y="0" width="550" height="688" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1584512181359" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584381996631">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
