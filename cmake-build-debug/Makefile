@@ -122,6 +122,33 @@ PSEDA/fast:
 	$(MAKE) -f CMakeFiles\PSEDA.dir\build.make CMakeFiles/PSEDA.dir/build
 .PHONY : PSEDA/fast
 
+Maestro.obj: Maestro.cpp.obj
+
+.PHONY : Maestro.obj
+
+# target to build an object file
+Maestro.cpp.obj:
+	$(MAKE) -f CMakeFiles\PSEDA.dir\build.make CMakeFiles/PSEDA.dir/Maestro.cpp.obj
+.PHONY : Maestro.cpp.obj
+
+Maestro.i: Maestro.cpp.i
+
+.PHONY : Maestro.i
+
+# target to preprocess a source file
+Maestro.cpp.i:
+	$(MAKE) -f CMakeFiles\PSEDA.dir\build.make CMakeFiles/PSEDA.dir/Maestro.cpp.i
+.PHONY : Maestro.cpp.i
+
+Maestro.s: Maestro.cpp.s
+
+.PHONY : Maestro.s
+
+# target to generate assembly for a file
+Maestro.cpp.s:
+	$(MAKE) -f CMakeFiles\PSEDA.dir\build.make CMakeFiles/PSEDA.dir/Maestro.cpp.s
+.PHONY : Maestro.cpp.s
+
 Materia.obj: Materia.cpp.obj
 
 .PHONY : Materia.obj
@@ -257,6 +284,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\PSEDA.dir\build.make CMakeFiles/PSEDA.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+menuMaestros.obj: menuMaestros.cpp.obj
+
+.PHONY : menuMaestros.obj
+
+# target to build an object file
+menuMaestros.cpp.obj:
+	$(MAKE) -f CMakeFiles\PSEDA.dir\build.make CMakeFiles/PSEDA.dir/menuMaestros.cpp.obj
+.PHONY : menuMaestros.cpp.obj
+
+menuMaestros.i: menuMaestros.cpp.i
+
+.PHONY : menuMaestros.i
+
+# target to preprocess a source file
+menuMaestros.cpp.i:
+	$(MAKE) -f CMakeFiles\PSEDA.dir\build.make CMakeFiles/PSEDA.dir/menuMaestros.cpp.i
+.PHONY : menuMaestros.cpp.i
+
+menuMaestros.s: menuMaestros.cpp.s
+
+.PHONY : menuMaestros.s
+
+# target to generate assembly for a file
+menuMaestros.cpp.s:
+	$(MAKE) -f CMakeFiles\PSEDA.dir\build.make CMakeFiles/PSEDA.dir/menuMaestros.cpp.s
+.PHONY : menuMaestros.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -266,6 +320,9 @@ help:
 	@echo ... PSEDA
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Maestro.obj
+	@echo ... Maestro.i
+	@echo ... Maestro.s
 	@echo ... Materia.obj
 	@echo ... Materia.i
 	@echo ... Materia.s
@@ -281,6 +338,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... menuMaestros.obj
+	@echo ... menuMaestros.i
+	@echo ... menuMaestros.s
 .PHONY : help
 
 
