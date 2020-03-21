@@ -1,18 +1,31 @@
 #include "Maestro.h"
 
-int menu();
-
 void agregarProfesor();
+
+void mostrarProfesor();
+
+int subMenuMaestros() {
+    int opc;
+
+    cout << "**********Maestro**********" << endl;
+    cout << "1. Agregar\n2. Mostrar\n3. Buscar\n4. Modificar\n5. Eliminar\n6. Regresar\nOpcion: ";
+    cin >> opc;
+    getchar();
+    return opc;
+}
 
 void menuMaestros() {
     bool continuar = true;
+    Maestro m;
 
+    m.genera();
     do{
-        switch (menu()) {
+        switch (subMenuMaestros()){
             case 1:
                 agregarProfesor();
                 break;
             case 2:
+                mostrarProfesor();
                 break;
             case 3:
                 break;
@@ -27,6 +40,12 @@ void menuMaestros() {
                 cout << "Opción incorrecta...." << endl;
         }
     }while(continuar);
+}
+
+void mostrarProfesor() {
+    Maestro m;
+    m.mostrar();
+    getchar();
 }
 
 void agregarProfesor() {
@@ -60,12 +79,4 @@ void agregarProfesor() {
     }
 }
 
-int menu() {
-    int opc;
 
-    cout << "**********Maestro**********" << endl;
-    cout << "1. Agregar\n2. Mostrar\n3. Buscar\n4. Modificar\n5. Eliminar\n6. Regresar\nOpcion: ";
-    cin >> opc;
-    getchar();
-    return opc;
-}

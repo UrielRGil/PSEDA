@@ -10,7 +10,7 @@ void modificarMateria();
 
 void eliminarMateria();
 
-int menu() {
+int subMenuMat() {
     int opc;
 
     cout << "**********Materia**********" << endl;
@@ -25,7 +25,7 @@ void menuMateria() {
     bool continuar = true;
 
     do {
-        switch(menu()) {
+        switch(subMenuMat()) {
             case 1:
                 agregarMateria();
                 break;

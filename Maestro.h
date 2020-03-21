@@ -8,11 +8,14 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
+#include <string>
 
 #define TAM_NOMBRE 40
 #define TAM_EDAD 2
 #define TAM_CLAVE 10
 #define TAM_TELEFONO 10
+#define CONTENEDOR 4
+#define MAX_REGS 1000
 #define CUENTA_MAESTROS "cuentaMaestros.txt"
 
 using namespace std;
@@ -32,8 +35,18 @@ public:
     void setClave(char *clave);
     void setMateria(char *materia);
     void setTelefono(char *tel);
-    bool agregar(const Maestro &m);
+    char *getNombre();
+    char* getClave();
+    char *getEdad();
+    char *getMateria();
+    char *getTelefono();
+    void genera();
+    int dispersion(char *clave);
+    bool agregar(Maestro &nuevoMaestro);
+    void mostrar();
 
+private:
+    void imprimir(Maestro m);
 };
 
 

@@ -9,7 +9,7 @@ void menuMaestros();
 int principalMenu() {
     int opc;
     cout << "**********Menu Principal**********" << endl;
-    cout << "1. Pagos\n2. Materia\n3.Maestros\n4. Salir\nOpcion: ";
+    cout << "1. Pagos\n2. Materia\n3. Maestros\n4. Salir\nOpcion: ";
     cin >> opc;
     getchar();
     return opc;
