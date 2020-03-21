@@ -30,7 +30,34 @@ void menuMaestros() {
 }
 
 void agregarProfesor() {
+    Maestro m;
+    char nombre[TAM_NOMBRE+1];
+    char edad[TAM_EDAD+1];
+    char clave[TAM_CLAVE+1];
+    char materia[TAM_NOMBRE+1];
+    char telefono[TAM_TELEFONO];
 
+    cout << "**********Agregar Profesor**********" << endl;
+    cout << "Ingrese el nombre del profesor: ";
+    cin.getline(nombre,TAM_NOMBRE+1);
+    cout << "Ingrese la clave del profesor: ";
+    cin.getline(clave,TAM_CLAVE+1);
+    cout << "Ingrese la materia que imparte: ";
+    cin.getline(materia,TAM_NOMBRE+1);
+    cout << "Ingrese la edad: ";
+    cin.getline(edad,TAM_EDAD+1);
+    cout << "Ingrese el telefono: ";
+    cin.getline(telefono,TAM_TELEFONO+1);
+
+    m.setNombre(nombre);
+    m.setClave(clave);
+    m.setMateria(materia);
+    m.setTelefono(telefono);
+    m.setEdad(edad);
+
+    if (m.agregar(m)) {
+
+    }
 }
 
 int menu() {

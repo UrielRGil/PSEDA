@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/R/Documents/ClionProjects/PSEDA/Maestro.cpp
+Maestro.h
+C:/Users/R/Documents/ClionProjects/PSEDA/Maestro.h
+
+C:/Users/R/Documents/ClionProjects/PSEDA/Maestro.h
+iostream
+-
+fstream
+-
+
 C:/Users/R/Documents/ClionProjects/PSEDA/Materia.cpp
 Materia.h
 C:/Users/R/Documents/ClionProjects/PSEDA/Materia.h
@@ -19,4 +29,12 @@ cstring
 -
 fstream
 -
+
+C:/Users/R/Documents/ClionProjects/PSEDA/main.cpp
+iostream
+-
+
+C:/Users/R/Documents/ClionProjects/PSEDA/menuMaestros.cpp
+Maestro.h
+C:/Users/R/Documents/ClionProjects/PSEDA/Maestro.h
 
