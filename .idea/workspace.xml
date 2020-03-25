@@ -15,9 +15,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Maestro.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Maestro.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Maestro.h" beforeDir="false" afterPath="$PROJECT_DIR$/Maestro.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MenuMateria.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MenuMateria.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSEDA.dir/Maestro.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSEDA.dir/Maestro.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSEDA.dir/menuMaestros.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSEDA.dir/menuMaestros.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSEDA.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSEDA.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/PSEDA.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/PSEDA.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dispersion2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dispersion2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menuMaestros.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/menuMaestros.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +67,11 @@
       <option name="presentableId" value="Default" />
       <updated>1584209286644</updated>
       <workItem from="1584209288034" duration="19674000" />
-      <workItem from="1584816637190" duration="3885000" />
+      <workItem from="1584816637190" duration="3933000" />
+      <workItem from="1584915743448" duration="9000" />
+      <workItem from="1584986667481" duration="9863000" />
+      <workItem from="1585070222114" duration="1782000" />
+      <workItem from="1585105490705" duration="1859000" />
     </task>
     <servers />
   </component>
@@ -77,38 +83,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584374393930" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1584819786571">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1585075324681">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584819786571" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1584819786571">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585075324681" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1585075324681">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584819786571" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1584819786571">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585075324681" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1585075324681">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584819786571" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1584819786571">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585075324681" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1585075324681">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584819786571" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1584818062395">
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585075324681" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1585075324677">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584818062395" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1584818062395">
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585075324677" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1585075324677">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1584818062395" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1584818062395">
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1585075324677" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1585075324677">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1584818062395" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1584818062395">
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1585075324677" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1585075324677">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1584818062395" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1585075324677" />
     <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1584213429026">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -142,8 +148,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Maestro.cpp</url>
-          <line>59</line>
-          <option name="timeStamp" value="11" />
+          <line>73</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Maestro.cpp</url>
+          <line>42</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

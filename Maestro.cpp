@@ -42,17 +42,18 @@ void Maestro::genera() {
 int Maestro::dispersion(char *clave) {
     char copiaLlave[TAM_CLAVE+1];
     long int suma = 0;
-
+    int j = 0;
     strcpy(copiaLlave,clave);
 
     if(strlen(copiaLlave) < TAM_CLAVE + 1) {
-        for (int i = strlen(copiaLlave); i < TAM_CLAVE + 1 ; ++i) {
+        for (int i = strlen(copiaLlave); i < TAM_CLAVE + 1 ; i++) {
             copiaLlave[i] = ' ';
         }
         copiaLlave[TAM_CLAVE+1] = '\0';
     }
-    for (int j = 0; j < TAM_CLAVE + 1 ; j += 2) {
+    while (j < TAM_CLAVE){
         suma  = (suma + 100 * copiaLlave[j] + copiaLlave[j+1]) % 20000;
+        j+=2;
     }
     return (suma % 99);
 }
@@ -73,8 +74,7 @@ bool Maestro::agregar(Maestro &nuevoMaestro) {
     if (contador < CONTENEDOR) {
         contador++;
         file.seekg(posByte, ios::beg);
-        file.write((char *) &contador, sizeof(int));
-
+        file << contador << " ";
         for (int i = 0; i < CONTENEDOR; ++i) {
             file.read((char *) &maestro, sizeof(maestro));
             strcpy(id, maestro.getClave());
@@ -85,13 +85,12 @@ bool Maestro::agregar(Maestro &nuevoMaestro) {
                 return true;
             }
         }
-    } else {
+    }else {
         cout << "\nNo hay espacio para el registro" << endl;
         file.close();
         return false;
     }
 }
-
 void Maestro::mostrar() {
     Maestro m;
     int contador;
@@ -101,13 +100,13 @@ void Maestro::mostrar() {
 
     if(file.is_open()) {
         cout << endl;
-        for (int i = 0; i < 1 ; i++) {
-            file.read((char*)&contador,sizeof(int));
-            if(contador < 0) {
-                for (int j = 0; j < CONTENEDOR ; j++) {
-                    file.read((char*)&m,sizeof(Maestro));
-                    strcpy(key,m.getClave());
-                    if(key[0] != '\0') {
+        for (int i = 0; i < MAX_REGS ; i++) {
+            file.read((char*)&contador, sizeof(int));
+            if(contador > 0) {
+                for (int j = 0; j < CONTENEDOR; j++) {
+                    file.read((char *) &m, sizeof(Maestro));
+                    strcpy(key, m.getClave());
+                    if (key[0] != '\0') {
                         imprimir(m);
                     }
                 }
@@ -140,7 +139,7 @@ void Maestro::setEdad(char *edad) {
 }
 
 void Maestro::setTelefono(char *tel) {
-    strcpy(this->telefono,telefono);
+    strcpy(this->telefono,tel);
 }
 
 void Maestro::setMateria(char *materia) {
@@ -163,6 +162,6 @@ char * Maestro::getMateria() {
     return this->materia;
 }
 
-char* Maestro::getTelefono() {
+char * Maestro::getTelefono() {
     return this->telefono;
 }   

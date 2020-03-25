@@ -18,7 +18,7 @@ void menuMaestros() {
     bool continuar = true;
     Maestro m;
 
-    m.genera();
+    //m.genera();
     do{
         switch (subMenuMaestros()){
             case 1:
@@ -54,7 +54,7 @@ void agregarProfesor() {
     char edad[TAM_EDAD+1];
     char clave[TAM_CLAVE+1];
     char materia[TAM_NOMBRE+1];
-    char telefono[TAM_TELEFONO];
+    char telefono[TAM_TELEFONO+1];
 
     cout << "**********Agregar Profesor**********" << endl;
     cout << "Ingrese el nombre del profesor: ";

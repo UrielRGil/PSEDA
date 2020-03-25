@@ -25,8 +25,8 @@ class Maestro {
     char edad[TAM_EDAD+1] = {'\0'};
     char clave[TAM_CLAVE+1] = {'\0'};
     char materia[TAM_NOMBRE+1] = {'\0'};
-    char telefono[TAM_TELEFONO] = {'\0'};
-    int numMaestros;
+    char telefono[TAM_TELEFONO+1] = {'\0'};
+    int numMaestros = 0;
 public:
     Maestro();
     Maestro(const Maestro &m);
