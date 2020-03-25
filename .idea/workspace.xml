@@ -15,11 +15,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Maestro.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Maestro.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Maestro.h" beforeDir="false" afterPath="$PROJECT_DIR$/Maestro.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSEDA.dir/Maestro.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSEDA.dir/Maestro.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSEDA.dir/menuMaestros.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSEDA.dir/menuMaestros.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSEDA.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSEDA.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/PSEDA.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/PSEDA.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dispersion2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dispersion2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menuMaestros.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/menuMaestros.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +67,7 @@
       <workItem from="1584986667481" duration="9863000" />
       <workItem from="1585070222114" duration="1782000" />
       <workItem from="1585105490705" duration="1859000" />
-      <workItem from="1585162750347" duration="5816000" />
+      <workItem from="1585162750347" duration="6806000" />
     </task>
     <servers />
   </component>
@@ -120,14 +115,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584213429026" />
-    <state x="408" y="0" width="550" height="688" key="refactoring.ChangeSignatureDialog" timestamp="1585163437021">
+    <state x="408" y="0" width="550" height="688" key="refactoring.ChangeSignatureDialog" timestamp="1585168916376">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="408" y="0" width="550" height="688" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1585163437021" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585165178044">
+    <state x="408" y="0" width="550" height="688" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1585168916376" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585169552491">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585165178044" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585169552491" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -159,7 +154,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Maestro.cpp</url>
-          <line>145</line>
+          <line>171</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -169,7 +164,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Maestro.cpp</url>
-          <line>167</line>
+          <line>193</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>

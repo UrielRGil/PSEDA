@@ -10,6 +10,8 @@ void buscarMaestro();
 
 void agregarProfesor(Maestro &m);
 
+void eliminarProfesor();
+
 int subMenuMaestros() {
     int opc;
 
@@ -37,8 +39,10 @@ void menuMaestros() {
                 buscarMaestro();
                 break;
             case 4:
+                modificarProfesor();
                 break;
             case 5:
+                eliminarProfesor();
                 break;
             case 6:
                 continuar = false;
@@ -47,6 +51,31 @@ void menuMaestros() {
                 cout << "Opción incorrecta...." << endl;
         }
     }while(continuar);
+}
+
+void eliminarProfesor() {
+    char claveEliminar[TAM_CLAVE+1];
+    Maestro m;
+    char opc;
+    cout << "***********Eliminar***********" << endl;
+    cout << "Ingrese la clave del maestro que desee eliminar: ";
+    cin.getline(claveEliminar,TAM_CLAVE+1);
+
+    if(m.buscar(claveEliminar,m)){
+        cout << "Seguro que desea eliminar (s/n)?: ";
+        cin >> opc;
+        if (opc == 'S' || opc == 's') {
+            if(m.eliminar(claveEliminar,m)) {
+                cout << "Registro eliminado correctamente..." << endl;
+            }
+            else {
+                cout << "Error Error Error" << endl;
+            }
+        } else {
+            cout << "Operacion anulada" << endl;
+        }
+    }
+    getchar();
 }
 
 void buscarMaestro() {

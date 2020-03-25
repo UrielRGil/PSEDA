@@ -16,7 +16,6 @@
 #define TAM_TELEFONO 10
 #define CONTENEDOR 4
 #define MAX_REGS 1000
-#define CUENTA_MAESTROS "cuentaMaestros.txt"
 
 using namespace std;
 
@@ -26,7 +25,6 @@ class Maestro {
     char clave[TAM_CLAVE+1] = {'\0'};
     char materia[TAM_NOMBRE+1] = {'\0'};
     char telefono[TAM_TELEFONO+1] = {'\0'};
-    int numMaestros = 0;
 public:
     Maestro();
     Maestro(const Maestro &m);
@@ -47,6 +45,7 @@ public:
     bool buscar(char *clave, Maestro &m);
     void imprimir(Maestro m);
     bool modificar(char *claveModificar, Maestro &maestro);
+    bool eliminar(char *claveEliminar, Maestro &mastEliminar);
 private:
     long int buscarId(char *clave);
 };

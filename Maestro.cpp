@@ -137,6 +137,32 @@ bool Maestro::buscar(char *clave, Maestro &m) {
     return false;
 }
 
+bool Maestro::eliminar(char *claveEliminar, Maestro &mastEliminar) {
+    Maestro m;
+    int posIndice,posByte,contador;
+    fstream dispersionFile(DISPERSION_2,ios::in | ios::out);
+
+    if(dispersionFile.is_open()) {
+        posIndice = dispersion(claveEliminar);
+        posByte = buscarId(claveEliminar);
+
+        dispersionFile.seekg(posByte,ios::beg);
+        dispersionFile.read((char*)&mastEliminar,sizeof(Maestro));
+        dispersionFile.seekg(posByte,ios::beg);
+        dispersionFile.write((char*)&m, sizeof(Maestro));
+
+        posByte = posIndice * (sizeof(Maestro) * CONTENEDOR + sizeof(int));
+        dispersionFile.seekg(posByte,ios::beg);
+        dispersionFile.read((char*)&contador, sizeof(int));
+        contador--;
+        dispersionFile.seekg(posByte,ios::beg);
+        dispersionFile << contador << "   ";
+        dispersionFile.close();
+        return true;
+    }
+    return false;
+}
+
 long int Maestro::buscarId(char *clave) {
     Maestro m;
     int contador = 0,posIndice;
