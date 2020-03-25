@@ -44,9 +44,11 @@ public:
     int dispersion(char *clave);
     bool agregar(Maestro &nuevoMaestro);
     void mostrar();
-
-private:
+    bool buscar(char *clave, Maestro &m);
     void imprimir(Maestro m);
+    bool modificar(char *claveModificar, Maestro &maestro);
+private:
+    long int buscarId(char *clave);
 };
 
 

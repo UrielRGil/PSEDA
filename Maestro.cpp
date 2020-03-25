@@ -4,7 +4,7 @@
 
 #include "Maestro.h"
 
-#define DIPERSION_2 "dispersion2.txt"
+#define DISPERSION_2 "dispersion2.txt"
 
 Maestro::Maestro() {
     ifstream numRegs(CUENTA_MAESTROS,ios::in);
@@ -27,7 +27,7 @@ Maestro::Maestro(const Maestro &m) {
 void Maestro::genera() {
     Maestro m;
     int contador=0;
-    ofstream file(DIPERSION_2,ios::out);
+    ofstream file(DISPERSION_2, ios::out);
     if(file.is_open()){
         for (int i = 0; i < MAX_REGS ; i++) {
             file.write((char*)&contador, sizeof(int));
@@ -55,7 +55,8 @@ int Maestro::dispersion(char *clave) {
         suma  = (suma + 100 * copiaLlave[j] + copiaLlave[j+1]) % 20000;
         j+=2;
     }
-    return (suma % 99);
+    int sumaAux = suma % 99;
+    return sumaAux;
 }
 
 bool Maestro::agregar(Maestro &nuevoMaestro) {
@@ -64,17 +65,19 @@ bool Maestro::agregar(Maestro &nuevoMaestro) {
     int posId;
     long int posByte;
     int contador;
+    char aux[2];
     char id[TAM_CLAVE + 1];
-    fstream file(DIPERSION_2, ios::in | ios::out);
+    fstream file(DISPERSION_2, ios::in | ios::out);
 
     posId = dispersion(nuevoMaestro.getClave());
-    posByte = posId * (sizeof(maestro) * CONTENEDOR + sizeof(int));
+    posByte = posId * ((sizeof(maestro) * CONTENEDOR) + sizeof(int));
     file.seekp(posByte, ios::beg);
-    file.read((char *) &contador, sizeof(int));
+    file.read((char *) &aux, 2);
+    contador = atoi(aux);
     if (contador < CONTENEDOR) {
         contador++;
         file.seekg(posByte, ios::beg);
-        file << contador << " ";
+        file << contador << "   ";
         for (int i = 0; i < CONTENEDOR; ++i) {
             file.read((char *) &maestro, sizeof(maestro));
             strcpy(id, maestro.getClave());
@@ -93,15 +96,17 @@ bool Maestro::agregar(Maestro &nuevoMaestro) {
 }
 void Maestro::mostrar() {
     Maestro m;
+    char aux[2];
     int contador;
     long int posByte;
     char key[TAM_CLAVE+1];
-    ifstream file(DIPERSION_2,ios::in);
+    ifstream file(DISPERSION_2, ios::in);
 
     if(file.is_open()) {
         cout << endl;
         for (int i = 0; i < MAX_REGS ; i++) {
-            file.read((char*)&contador, sizeof(int));
+            file.read(aux, 4);
+            contador = atoi(aux);
             if(contador > 0) {
                 for (int j = 0; j < CONTENEDOR; j++) {
                     file.read((char *) &m, sizeof(Maestro));
@@ -118,12 +123,102 @@ void Maestro::mostrar() {
     }
 }
 
+bool Maestro::buscar(char *clave, Maestro &m) {
+    long int posByte;
+    ifstream dispersionFile(DISPERSION_2, ios::in);
+
+    if(dispersionFile.is_open()) {
+        posByte = buscarId(clave);
+        dispersionFile.seekg(posByte, ios::beg);
+        dispersionFile.read((char *) &m, sizeof(Maestro));
+        dispersionFile.close();
+        return true;
+    }
+    return false;
+}
+
+long int Maestro::buscarId(char *clave) {
+    Maestro m;
+    int contador = 0,posIndice;
+    long int posByte;
+    ifstream dispersionFile(DISPERSION_2, ios::in);
+
+    if(dispersionFile.is_open()) {
+        posIndice = dispersion(clave);
+        posByte =posIndice*((sizeof(Maestro)*CONTENEDOR)+ sizeof(int));
+        dispersionFile.seekg(posByte,ios::beg);
+        dispersionFile.read((char*)&contador, sizeof(int));
+        if(contador > 0) {
+            for (int i =0; i < CONTENEDOR;i++) {
+                dispersionFile.read((char*)&m,sizeof(Maestro));
+                if(strcmp(clave,m.getClave()) == 0) {
+                    posByte = (long)dispersionFile.tellg() - sizeof(Maestro);
+                    dispersionFile.close();
+                    return posByte;
+                }
+            }
+        }
+    }
+    else {
+        dispersionFile.close();
+    }
+    return -1;
+}
+
 void Maestro::imprimir(Maestro m) {
     cout << "Id: " << m.getClave() << endl;
     cout << "Nombre: " << m.getNombre() << endl;
     cout << "Edad: " << m.getEdad() << endl;
     cout << "Materia: " << m.getMateria() << endl;
-    cout << "Telefono: " << m.getTelefono() << endl;
+    //cout << "Telefono: " << m.getTelefono() << endl;
+    cout << endl;
+}
+
+bool Maestro::modificar(char *claveModificar, Maestro &maestro) {
+    Maestro registroLimpio,m;
+    int posIndiceAntiguo,posIndiceNuevo, contador;
+    long int posByteAntiguo, posByteNuevo;
+    fstream dispersionFile(DISPERSION_2,ios::in | ios::out);
+    char auxID[TAM_CLAVE+1];
+
+    if(dispersionFile.is_open()) {
+        posIndiceAntiguo = dispersion(claveModificar);
+        posIndiceNuevo = dispersion(maestro.getClave());
+        posByteAntiguo =buscarId(claveModificar);
+        posByteNuevo = posIndiceNuevo * ((sizeof(Maestro) * CONTENEDOR) + sizeof(int));
+
+        if(posByteAntiguo == posByteNuevo) {
+            dispersionFile.seekg(posByteAntiguo,ios::beg);
+            dispersionFile.write((char*)&maestro, sizeof(Maestro));
+        } else {
+            dispersionFile.seekg(posByteAntiguo,ios::beg);
+            dispersionFile.write((char*)&registroLimpio, sizeof(Maestro));
+            posByteAntiguo = posIndiceAntiguo * (sizeof(Maestro) * CONTENEDOR) + sizeof(int);
+            dispersionFile.readsome((char*)&contador, sizeof(int));
+            contador--;
+            dispersionFile.seekg(posByteAntiguo,ios::beg);
+            dispersionFile << contador << "   ";
+            dispersionFile.seekg(posByteNuevo,ios::beg);
+            dispersionFile.read((char*)&contador, sizeof(int));
+            if(contador < CONTENEDOR) {
+                contador++;
+                dispersionFile.seekg(posByteNuevo,ios::beg);
+                dispersionFile << contador << "   ";
+                for (int i = 0; i < CONTENEDOR ; ++i) {
+                    dispersionFile.read((char*)&m, sizeof(Maestro));
+                    strcpy(auxID,m.getClave());
+                    if(auxID[0] != '\0'){
+                        dispersionFile.seekg((long)dispersionFile.tellg()- sizeof(Maestro),ios::beg);
+                        dispersionFile.write((char*)&maestro,sizeof(Maestro));
+                        dispersionFile.close();
+                        return true;
+                    }
+                }
+            } else {
+                return false;
+            }
+        }
+    }
 }
 
 void Maestro::setNombre(char *nombre) {
